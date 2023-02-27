@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <title>Fisheye - photographe </title>
+  </head>
+  <body>
+    <header id="header" role="banner">
+      <a href= "index.html"><img src="assets/images/logo.png" alt="Fisheye home page" class="logo"></a>
+    </header>
+    <main id="main" role="main">
+        <div id="photograph-header">
+        
+          <button aria-label="Contact Me" role="button" class="contact_button">Contactez-moi</button>
+        </div>
+      
+      <div id="contact_modal">
+        <div class="modal" aria-labelledby="contactForm">
+          <header>
+            <h2 id="contactForm">Contactez-moi</h2>
+            <img tabIndex="0" id="closeCrossForm" src="assets/icons/close.svg" alt="Close Contact form">
+          </header>
+          <form id="formulaire">
+            <div>
+              <label id="prenomForm">Prénom</label>
+              <input aria-labelledby="prenomForm">
+              <label id="nomForm">Nom</label>
+              <input aria-labelledby="nomForm">
+              <label id="emailForm">Email</label>
+              <input aria-labelledby="emailForm">
+              <label id="messageForm">Votre message</label>
+              <input aria-labelledby="messageForm">
+            </div>
+            <button aria-label="Send" role="button" class="contact_button">Envoyer</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="burgerMenuParent">
+        <p id="texteTri">Trier par</p>
+        <svg  id="svgBurgerImg" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.33447L8.00465 8.13311L14.5973 1.33447" stroke="#E9E9E9" stroke-width="2">
+        </svg>
+        <select name= "format" id="burgerMenuNav" aria-labelledby="texteTri">
+          <option value="Popularité" id="popularité">Popularité</option>
+          <option value="Date" id="Date">Date</option>
+          <option value="Titre" id="Titre">Titre</option>
+        </select>
+      </div>
+
+      <div class="media_section"></div>
+    </main>
+    
+    <div id="lightbox" aria-label="image closeup view">
+      <div class="conteneurMedia"></div>
+      <svg tabIndex="0" aria-label="Close dialog" id="crosslight" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M42 4.23L37.77 0L21 16.77L4.23 0L0 4.23L16.77 21L0 37.77L4.23 42L21 25.23L37.77 42L42 37.77L25.23 21L42 4.23Z" fill="#901C1C"/>
+        </svg>
+      <i class="fa-solid fa-chevron-left" aria-label="previous image" id="arrowlightLeft" tabIndex="0"></i>
+      <i class="fa-solid fa-chevron-right" aria-label="next image" id="arrowlightRight" tabIndex="0"></i>
+    </div>
+
+    <div class="encadré"></div>
+    
+
+    <script type="module" src="/scripts/pages/photographer.js"></script>
+    <script src="/scripts/utils/contactForm.js"></script>
+    <script type="module" src="scripts/factories/photographer.js"></script>
+    <script type="module" src="scripts/factories/media.js"></script>
+
+  </body>
+</html>
